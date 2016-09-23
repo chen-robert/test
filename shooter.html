@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Shooters!</title>
+</head>
+<body onload="init()">
+    
+<div id="login">
+    <input id="username" type="text" value="Username">
+    <button onclick="send()">Log In</button>
+</div>
+<div id="game" style="display:none">
+<canvas id="cam" height="800" width="1000" style="border:1px solid #000000; background: url(./client/images/Background.jpg)"></canvas>
+</div>
+
+<script src="client/scripts/Engine.js"></script>
+<script src="client/scripts/Effects.js"></script>
+<script src="client/scripts/Sender.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script>
+    var socket = io();
+    reqSocket(socket);
+</script>
+
+</body>
+</html>
